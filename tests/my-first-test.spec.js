@@ -24,6 +24,6 @@ test.describe('Set of two tests', () => {
     await expect(page.locator('.shopping_cart_badge')).toHaveCount(1);
     await expect(page.locator('.inventory_item_name')).toHaveText('Sauce Labs Backpack');
     await page.locator('[data-test="remove-sauce-labs-backpack"]').click();
-    await expect(page.locator(".cart_list > .removed_cart_item"));
+    await expect(page.locator(".cart_item_label")).toBeHidden();
   });
 });
